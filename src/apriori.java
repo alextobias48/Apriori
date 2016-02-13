@@ -51,8 +51,15 @@ public class apriori {
 		
 		//Construct C1
 		
+		//Loop for all atributes
+			//Loop for all potential values
+				//Loop through column to count instances
 		
+				//Add attribute-potential value and count
 		
+		ArrayList<Itemset> C1 = new ArrayList<Itemset>();
+		C1.add(new Itemset("attrName",123));
+			
 		System.out.println("Number of Rows: " + numRows);
 		System.out.println("Number of Attributes: " + numAttributes);
 		System.out.print(data[400][16]);
@@ -60,7 +67,13 @@ public class apriori {
 		}
 	
 	
-	public class Itemset {
+	public static class Itemset {
+		
+		public Itemset(String attrName, int cnt){
+			attributeName = attrName;
+			count = cnt;
+		}
+		
 		String attributeName;
 		int count;
 	}
